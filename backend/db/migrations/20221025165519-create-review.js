@@ -21,6 +21,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: 'Users'
+        }
       },
       review: {
         type: Sequelize.STRING,
@@ -40,7 +41,7 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
-    }});
+    });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Reviews');

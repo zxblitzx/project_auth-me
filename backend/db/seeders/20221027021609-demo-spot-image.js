@@ -29,7 +29,7 @@ module.exports = {
       preview: true
     },
     {
-      spotId: 4,
+      spotId: 2,
       url: 'https://www.google.com/images/55',
       preview: true
     },
@@ -45,7 +45,7 @@ module.exports = {
      */
     const Op = Sequelize.Op;
     await queryInterface.bulkDelete('SpotImages', {
-      spotId: { [Op.in]: [1, 2, 3, 4] }
+      spotId: { [Op.in]: [1, 2, 3] }
     }, {});
   }
 };

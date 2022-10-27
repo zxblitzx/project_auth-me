@@ -50,7 +50,7 @@ module.exports = {
       price: 88883.23
   },
   {
-    ownerId: 4,
+    ownerId: 3,
       address: '9090 2nd Street',
       city: 'Houston',
       state: 'Texas',

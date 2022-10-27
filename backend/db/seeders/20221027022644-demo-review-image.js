@@ -14,15 +14,15 @@ module.exports = {
     */
    await queryInterface.bulkInsert('ReviewImages', [
     {
-      reviewId: 3,
+      reviewId: 1,
       url: 'https://www.google.com/images/77'
     },
     {
-      reviewId: 6,
+      reviewId: 2,
       url: 'https://www.google.com/images/23'
     },
     {
-      reviewId: 2,
+      reviewId: 3,
       url: 'https://www.google.com/images/90'
     },
     {
@@ -41,7 +41,7 @@ module.exports = {
      */
     const Op = Sequelize.Op
     await queryInterface.bulkDelete('ReviewImages', {
-      reviewId: { [Op.in]: [1, 2, 3, 6] }
+      reviewId: { [Op.in]: [1, 2, 3] }
     }, {});
   }
 };
