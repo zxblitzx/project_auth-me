@@ -12,30 +12,26 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bullkInsert('Reviews',[
+   await queryInterface.bulkInsert('SpotImages', [
     {
       spotId: 1,
-      UserId: 2,
-      review: 'Small House',
-      stars: 3
+      url: 'https://www.google.com/images/52',
+      preview: true
     },
     {
       spotId: 2,
-      UserId: 3,
-      review: 'Nice House',
-      stars: 4
+      url: 'https://www.google.com/images/21',
+      preview: true
     },
     {
       spotId: 3,
-      UserId: 4,
-      review: 'The House was very clean',
-      stars: 5
+      url: 'https://www.google.com/images/33',
+      preview: true
     },
     {
       spotId: 4,
-      UserId: 5,
-      review: 'The House was dirty',
-      stars: 2
+      url: 'https://www.google.com/images/55',
+      preview: true
     },
   ], {});
   },
@@ -48,8 +44,8 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
     const Op = Sequelize.Op;
-    await queryInterface.bullkDelete('Bookings', {
-      userId: { [Op.in]: [2, 3, 4, 5] }
+    await queryInterface.bulkDelete('SpotImages', {
+      spotId: { [Op.in]: [1, 2, 3, 4] }
     }, {});
   }
 };

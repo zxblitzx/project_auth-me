@@ -12,30 +12,22 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bullkInsert('Reviews',[
+   await queryInterface.bulkInsert('ReviewImages', [
     {
-      spotId: 1,
-      UserId: 2,
-      review: 'Small House',
-      stars: 3
+      reviewId: 3,
+      url: 'https://www.google.com/images/77'
     },
     {
-      spotId: 2,
-      UserId: 3,
-      review: 'Nice House',
-      stars: 4
+      reviewId: 6,
+      url: 'https://www.google.com/images/23'
     },
     {
-      spotId: 3,
-      UserId: 4,
-      review: 'The House was very clean',
-      stars: 5
+      reviewId: 2,
+      url: 'https://www.google.com/images/90'
     },
     {
-      spotId: 4,
-      UserId: 5,
-      review: 'The House was dirty',
-      stars: 2
+      reviewId: 1,
+      url: 'https://www.google.com/images/4'
     },
   ], {});
   },
@@ -47,9 +39,9 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    const Op = Sequelize.Op;
-    await queryInterface.bullkDelete('Bookings', {
-      userId: { [Op.in]: [2, 3, 4, 5] }
+    const Op = Sequelize.Op
+    await queryInterface.bulkDelete('ReviewImages', {
+      reviewId: { [Op.in]: [1, 2, 3, 6] }
     }, {});
   }
 };
