@@ -19,8 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
-  Booking.init(
-    {
+  Booking.init({
     spotId: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -36,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
     endDate: {
       type: DataTypes.DATE,
       allowNull: false
-  }, 
+    }
+  }, {
     sequelize,
     modelName: 'Booking',
   });
